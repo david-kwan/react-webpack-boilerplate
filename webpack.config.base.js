@@ -14,8 +14,17 @@ module.exports = {
         loader: 'babel-loader', // use babel loader to transform our code before creating output bundle
         exclude: /node_modules/,
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-react'] // preset are browser, react
+          presets: ['@babel/preset-env', '@babel/preset-react'], // preset are browser, react
+          plugins: [
+            'react-hot-loader/babel', // preserve state on reload
+            '@babel/plugin-proposal-class-properties'
+          ]
         }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'], // css loader, let webpack handle css syntax. style loader will inject css into html at runtime
+        exclude: /node_modules/
       }
     ]
   },

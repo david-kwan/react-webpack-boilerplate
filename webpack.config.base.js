@@ -1,7 +1,7 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, 'dist'), // absolute path
@@ -14,9 +14,14 @@ module.exports = {
         loader: 'babel-loader', // use babel loader to transform our code before creating output bundle
         exclude: /node_modules/,
         options: {
-          presets: ['@babel/preset-env']
+          presets: ['@babel/preset-env', '@babel/preset-react'] // preset are browser, react
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    })
+  ]
 };

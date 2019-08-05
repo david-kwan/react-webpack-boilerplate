@@ -14,7 +14,8 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended" // fixes React is defined but never used error
+        "plugin:react/recommended", // fixes React is defined but never used error
+        "plugin:jsx-a11y/recommended" // checks for accessibility
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -24,6 +25,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "jsx-a11y"
     ]
 }

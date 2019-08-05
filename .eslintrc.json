@@ -1,0 +1,29 @@
+{
+    "parser": "babel-eslint", // fixes unexpected import error
+    "env": {
+        "browser": true,
+        "es6": true,
+        "commonjs": true,
+        "node": true,
+        "jest": true // fixes describe is not defined / it
+    },
+    "settings": {
+        "react": {
+            "version": "16.8.6"
+        }
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended" // fixes React is defined but never used error
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ]
+}

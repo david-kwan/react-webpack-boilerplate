@@ -17,10 +17,10 @@ class App extends Component {
         <h1 className={this.state.count >= 5 ? 'warning' : null}>
           Count: {this.state.count}
         </h1>
-        <button onClick={e => this.setState({ count: this.state.count + 1 })}>
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
           +
         </button>
-        <button onClick={e => this.setState({ count: this.state.count - 1 })}>
+        <button onClick={() => this.setState({ count: this.state.count - 1 })}>
           -
         </button>
         {this.state.count >= 5 ? (

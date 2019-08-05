@@ -1,0 +1,17 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": ["last 2 versions", "not dead", "not < 2%"],
+                "useBuiltIns": "entry"
+            }
+        ],
+        "@babel/preset-react"
+    ], // preset can be targetted to specific browsers to decrease bundle size, react
+    "plugins": [
+        "react-hot-loader/babel", // preserve state on reload
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-syntax-dynamic-import" // lazy load
+    ]
+}
